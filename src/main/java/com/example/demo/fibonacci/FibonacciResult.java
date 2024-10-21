@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public class FibonacciResult {
 
-    private int[] sequence = null;
+    private long[] sequence = null;
     private String msg = "";
 
 }
