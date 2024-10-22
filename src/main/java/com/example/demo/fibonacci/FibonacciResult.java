@@ -6,8 +6,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class FibonacciResult {
-
     private long[] sequence = null;
     private String msg = "";
-
 }

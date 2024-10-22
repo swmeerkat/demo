@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.unit;
 
 import com.example.demo.fibonacci.Fibonacci;
 import com.example.demo.fibonacci.FibonacciResult;
@@ -11,7 +11,7 @@ import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class FibonacciTest {
+class FibonacciTests {
 
     private static Stream<Arguments> checkFibonacciSequence() {
         return Stream.of(
