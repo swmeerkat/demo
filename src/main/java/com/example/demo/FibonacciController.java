@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public final class FibonacciController {
+public class FibonacciController {
 
   private final Fibonacci fibonacci;
 
