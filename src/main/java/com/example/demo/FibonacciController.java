@@ -7,17 +7,17 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class FibonacciController {
+public final class FibonacciController {
 
-    Fibonacci fibonacci;
+  private final Fibonacci fibonacci;
 
-    public FibonacciController(Fibonacci fibonacci) {
-        this.fibonacci = fibonacci;
-    }
+  public FibonacciController(final Fibonacci fibonacci) {
+    this.fibonacci = fibonacci;
+  }
 
-    @GetMapping("/fibonacci/{length}")
-    public FibonacciResult getFibonacciSequence(@PathVariable int length) {
-        return fibonacci.getSequence(length);
-    }
+  @GetMapping("/fibonacci/{length}")
+  public FibonacciResult getFibonacciSequence(@PathVariable final int length) {
+    return fibonacci.getSequence(length);
+  }
 
 }

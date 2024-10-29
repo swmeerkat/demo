@@ -8,7 +8,8 @@ import static org.springframework.boot.test.context.SpringBootTest.WebEnvironmen
 // to use one context for all IT
 @SpringBootTest(webEnvironment = RANDOM_PORT)
 public class BaseIT {
-    @LocalServerPort
-    Integer port;
+
+  @LocalServerPort
+  Integer port;
 }
 

@@ -5,17 +5,17 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.fail;
 
-class DemoApplicationIT extends BaseIT{
+class DemoApplicationIT extends BaseIT {
 
-	@Test
-	void contextLoads() {
-	}
+  @Test
+  void contextLoads() {
+  }
 
-	@Test
-	@Disabled
-	void toBeIgnored() {
-		// The world is bad. Everybody ignores me.
-        fail();
-	}
+  @Test
+  @Disabled
+  void toBeIgnored() {
+    // The world is bad. Everybody ignores me.
+    fail();
+  }
 
 }

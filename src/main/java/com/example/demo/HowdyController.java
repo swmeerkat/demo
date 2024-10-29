@@ -1,4 +1,9 @@
 package com.example.demo;
 
-public class HowdyController {
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public final class HowdyController {
+
 }

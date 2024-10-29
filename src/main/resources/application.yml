@@ -1,6 +1,6 @@
 spring:
- application:
-  name: demo
+  application:
+    name: demo
 
 logging:
   level:
