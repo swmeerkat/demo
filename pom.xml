@@ -37,6 +37,7 @@
     <maven.failsafe.plugin.version>3.5.1</maven.failsafe.plugin.version>
     <maven.checkstyle.plugin.version>3.6.0</maven.checkstyle.plugin.version>
     <maven.site.plugin.version>3.21.0</maven.site.plugin.version>
+    <maven.pmd.plugin.version>3.26.0</maven.pmd.plugin.version>
   </properties>
 
   <parent>
@@ -237,6 +238,11 @@
             </reports>
           </reportSet>
         </reportSets>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+        <version>${maven.pmd.plugin.version}</version>
       </plugin>
       <plugin>
         <groupId>org.jacoco</groupId>
