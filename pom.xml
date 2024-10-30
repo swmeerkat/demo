@@ -32,7 +32,11 @@
   <properties>
     <java.version>17</java.version>
     <jacoco.plugin.version>0.8.12</jacoco.plugin.version>
-    <maven.surefire.version>3.5.1</maven.surefire.version>
+    <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
+    <maven.surefire.plugin.version>3.5.1</maven.surefire.plugin.version>
+    <maven.failsafe.plugin.version>3.5.1</maven.failsafe.plugin.version>
+    <maven.checkstyle.plugin.version>3.6.0</maven.checkstyle.plugin.version>
+    <maven.site.plugin.version>3.21.0</maven.site.plugin.version>
   </properties>
 
   <parent>
@@ -85,7 +89,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.13.0</version>
+        <version>${maven.compiler.plugin.version}</version>
         <configuration>
           <annotationProcessorPaths>
             <path>
@@ -97,8 +101,13 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-site-plugin</artifactId>
+        <version>${maven.site.plugin.version}</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
-        <version>${maven.surefire.version}</version>
+        <version>${maven.surefire.plugin.version}</version>
         <configuration>
           <skipTests>false</skipTests>
           <argLine>${surefire.jacoco.args}</argLine>
@@ -107,7 +116,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-failsafe-plugin</artifactId>
-        <version>3.5.1</version>
+        <version>${maven.failsafe.plugin.version}</version>
         <configuration>
           <skipTests>false</skipTests>
           <argLine>${failsafe.jacoco.args}</argLine>
@@ -212,12 +221,12 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-report-plugin</artifactId>
-        <version>${maven.surefire.version}</version>
+        <version>${maven.surefire.plugin.version}</version>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.6.0</version>
+        <version>${maven.checkstyle.plugin.version}</version>
         <configuration>
           <configLocation>google_checks.xml</configLocation>
         </configuration>
